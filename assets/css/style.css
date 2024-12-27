@@ -351,9 +351,11 @@ header .dropdown .dropdown-item:focus {
   border-radius: 0px 20px 20px 0px;
   padding: 15px 15px 0px 0px;
 }
+.tab-section .architecture .painting{
+  height: 337px;
+}
 .tab-section .architecture .architecture-img{
   height: 200px;
-  
 }
 .tab-section .architecture .content p{
   width: 225px;
@@ -371,6 +373,17 @@ header .dropdown .dropdown-item:focus {
 }
 .tab-section  .nav-tabs .nav-item{
   padding: 0px 10px;
+}
+.tab-section .nav-tabs .nav-item .nav-link{
+  background: none ;
+  border: none ;
+
+}
+.tab-section .nav-tabs .nav-item .nav-link.active {
+  background: none ;
+    border: none ;
+    border-bottom: 1px solid #2A2A2A ;
+
 }
 .tab-section .architecture p{
   color: white;
