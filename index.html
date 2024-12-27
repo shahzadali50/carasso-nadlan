@@ -34,11 +34,12 @@
               <a class="navbar-brand" href="index.html">
                 <img src="assets/images/header_logo.svg" alt="logo" />
               </a>
-              <a class="search-icon" href="index.html">
+              <a class="search-icon" href="javascript:void(0)" onclick="toggleSearchForm()">
                 <img class="img-fluid" src="assets/images/icons/search.svg" />
               </a>
             </div>
           </div>
+        
           <div class="col-12 mt-2 mt-sm-0 col-sm-4 col-md-3 d-lg-none header-select-col">
             <div class="nav-inner d-flex w-100 justify-content-between align-items-center">
               <select class="form-select custom-select bg-transparent border-0" id="mobileMenuDropdown"
@@ -51,11 +52,14 @@
               </select>
             </div>
           </div>
-
-
-
+          <div class="col-12 mt-2 search-form-container" id="searchFormContainer">
+            <form action="" class="seach-form position-relative">
+              <input placeholder="חפש שם פרויקט או מיקום" class="form-control w-100" type="text">
+              <img class="img-fluid search-icon" src="assets/images/sidebar/Search.png" alt="not-show">
+            </form>
+          </div>
         </div>
-
+    
       </div>
     </nav>
     <!-- Breadcrumb Navigation -->
@@ -69,9 +73,6 @@
         </ol>
       </div>
     </nav>
-
-
-
   </header>
 
   <!-- Sidebar -->
@@ -81,9 +82,9 @@
       <a href="javascript:void(0)" ><img src="assets/images/sidebar/logo.png" alt="not-show"></a>
       <a href="javascript:void(0)" ><img src="assets/images/sidebar/Search.png" alt="not-show"></a>
     </div>
-    
+    <div class="header-horizontal-line">
+    </div>
     <div class="sidenav-inner d-flex flex-column justify-content-between">
-
       <ul>
         <li><a class="sidenav-icon active" href="#">דף הבית</a></li>
         <li><a class="sidenav-icon" href="#">הסיפור שלנו</a></li>
@@ -128,6 +129,9 @@
     </div>
   </div>
   <!-- main -->
+
+
+
   <main>
     <!-- Hero Section -->
     <section class="hero-section">
@@ -809,7 +813,6 @@
       <ul class="dropdown-menu-custom" aria-labelledby="dropdownMenuButton1">
         <li><a class="dropdown-item mb-4" href="#"><img src="assets/images/settings_logo.svg" alt=""></a></li>
         <li><a class="dropdown-item" href="#">הודעות</a></li>
-        <li><a class="dropdown-item" href="#">הודעות</a></li>
         <li><a class="dropdown-item" href="#">משוב</a></li>
         <li><a class="dropdown-item" href="#">הסרת קישור</a></li>
         <li><a class="dropdown-item" href="#">יציאה קונטקט</a></li>
@@ -827,9 +830,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
   <script>
     function openNav() {
-      document.getElementById("mySidenav").style.width = "400px";
+      const sidenav = document.getElementById("mySidenav");
+      if (window.innerWidth <= 576) {
+        sidenav.style.width = "300px"; // Adjust width for small screens
+      } else {
+        sidenav.style.width = "400px"; // Default width for larger screens
+      }
     }
-
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
     }
@@ -844,6 +851,11 @@
         var dropdown = document.querySelector('.dropdown-menu-custom');
         dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
       });
+    }
+
+    function toggleSearchForm() {
+      const searchFormContainer = document.getElementById('searchFormContainer');
+      searchFormContainer.classList.toggle('show');
     }
 
 
