@@ -815,10 +815,8 @@ footer .dropdown-menu-custom a.dropdown-item{
   background: #ffffff;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
   text-align: right;
   color: rgba(42, 42, 42);
-
 }
 
 .sidenav hr {
@@ -827,59 +825,45 @@ footer .dropdown-menu-custom a.dropdown-item{
 }
 
 .sidenav-inner {
-  width: 200px;
+  width: 400px;
   padding: 15px 25px;
+  height: 500px;
 }
 
 .sidenav ul li a {
   padding: 8px 8px;
   text-decoration: none;
   font-size: 18px;
-  color: rgba(42, 42, 42);
+  color: #BBBDBF;
   font-weight: 600;
   display: block;
   text-transform: uppercase;
   transition: 0.3s;
 }
-
+.sidenav .social-links li a {
+  font-size: 16px;
+  font-weight: 300;
+  padding: 4px 8px;
+}
+.sidenav .user  {
+  color: #BBBDBF;
+ 
+}
+.sidenav .horizontal-line  {
+  border-bottom: 1px solid #BBBDBF;
+  margin: 15px 0px;
+}
+.sidenav .sidenav-inner ul li a.sidenav-icon.active {
+  color: #2A2A2A;
+  font-weight: 600;
+}
 .sidenav a:hover {
   color: rgba(199, 154, 121, 1);
 }
-.sidenav .btn-success:hover{
-  color: white;
+.sidenav .sidebar-header{
+  border-bottom: 1px solid #BBBDBF;
+  padding: 20px 10px 10px 10px;
 }
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 5px;
-  left: 15px;
-  font-size: 28px;
-  color: rgb(42, 42, 42);
-}
-
-.sidenav .btn {
-  border-radius: 5px;
-  text-transform: uppercase;
-}
-
-.sidenav li a img {
-  width: 25px;
-  margin-left: 15px;
-}
-
-.sidenav-icon span {
-  background-size: contain;
-  background-position: center;
-  width: 25px;
-  height: 25px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  margin-left: 15px;
-  position: relative;
-  top: 5px;
-}
-
-
 .fixed-settings-bar { 
   position: fixed;
   right: 50px;

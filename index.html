@@ -76,18 +76,55 @@
 
   <!-- Sidebar -->
   <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-angle-double-right"></i></a>
-    <div class="sidenav-inner">
+    <div class="d-flex justify-content-between  sidebar-header">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="assets/images/sidebar/close.png" alt="not-show"></a>
+      <a href="javascript:void(0)" ><img src="assets/images/sidebar/logo.png" alt="not-show"></a>
+      <a href="javascript:void(0)" ><img src="assets/images/sidebar/Search.png" alt="not-show"></a>
+    </div>
+    
+    <div class="sidenav-inner d-flex flex-column justify-content-between">
 
       <ul>
-        <li><a class="sidenav-icon" href="#">הודעות</a></li>
-        <li><a class="sidenav-icon" href="#">הודעות</a></li>
-        <li><a class="sidenav-icon" href="#">משוב</a></li>
-        <li><a class="sidenav-icon" href="#">הסרת קישור</a></li>
-        <li><a class="sidenav-icon" href="#">יציאה קונטקט</a></li>
+        <li><a class="sidenav-icon active" href="#">דף הבית</a></li>
+        <li><a class="sidenav-icon" href="#">הסיפור שלנו</a></li>
+        <li><a class="sidenav-icon" href="#">פרויקטים</a></li>
+        <li><a class="sidenav-icon " href="#">התחדשות עירונית</a></li>
+        <li><a class="sidenav-icon" href="#">חדשות ועידכונים</a></li>
       </ul>
+      <ul class="social-links list-unstyled">
 
-      <a href="javascript:void(0)" class="btn btn-success mt-5">Log out</a>
+        <!-- Phone -->
+        <li class="social-item user">
+          <img class="img-fluid" src="assets/images/sidebar/UserCircle.png" alt="not-show">
+          personal area </a>
+        </li>
+        <li class="social-item horizontal-line">
+        </li>
+        <!-- Phone -->
+        <li class="social-item d-flex justify-content-between align-items-center">
+          <a class="sidenav-icon text-decoration-none" href="tel:+9720501231234">+972 050 123 1234</a>
+          <div class="social-icon">
+            <img class="img-fluid" src="assets/images/sidebar/InstagramLogo.png" alt="not-show">
+          </div>
+        </li>
+        
+        <!-- Address -->
+        <li class="social-item d-flex justify-content-between align-items-center">
+          <a class="sidenav-icon text-decoration-none" href="יב״ל 24, תל אביב-יפו" target="_blank">ריב״ל 24, תל אביב-יפו</a>
+          <div class="social-icon">
+            <img class="img-fluid" src="assets/images/sidebar/LinkedinLogo.png" alt="not-show">
+          </div>
+        </li>
+        
+        <!-- Email -->
+        <li class="social-item d-flex justify-content-between align-items-center">
+          <a class="sidenav-icon text-decoration-none" href="mailto:info@carasso-nadlan.com">info@carasso-nadlan.com</a>
+          <div class="social-icon">
+            <img class="img-fluid" src="assets/images/sidebar/FacebookLogo.png" alt="not-show">
+          </div>
+        </li>
+      </ul>
+      
     </div>
   </div>
   <!-- main -->
@@ -147,28 +184,7 @@
         </div>
       </div>
     </section>
-    <section>
-      <div class="container container-pr position-relative">
-        <div class="row">
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
-            </li>
-          </ul>
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- tab-section -->
     <section class="tab-section">
@@ -811,7 +827,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
   <script>
     function openNav() {
-      document.getElementById("mySidenav").style.width = "220px";
+      document.getElementById("mySidenav").style.width = "400px";
     }
 
     function closeNav() {
